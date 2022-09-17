@@ -37,10 +37,10 @@ add_action( 'after_setup_theme', NS . 'register' );
  *
  * @return void
  */
-function register() {
+function register() : void {
 	register_block_type( __DIR__ . '/build' );
 
-	add_filter( 'block_categories_all', fn( $categories ) => array_merge(
+	add_filter( 'block_categories_all', fn( array $categories ) : array => array_merge(
 		$categories,
 		[
 			[

@@ -27,7 +27,7 @@ use function libxml_use_internal_errors;
 use function mb_convert_encoding;
 use DOMDocument;
 
-add_action( 'after_setup_theme', NS . 'register' );
+add_action( 'init', NS . 'register' );
 /**
  * Registers the block.
  *
